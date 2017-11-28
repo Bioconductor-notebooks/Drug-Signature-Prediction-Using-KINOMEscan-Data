@@ -21,7 +21,8 @@ RUN chown -R $NB_USER:users ./Data
 
 RUN conda config --add channels r
 RUN conda config --add channels bioconda
-RUN conda install -c conda-forge jupyter_contrib_nbextensions
+#RUN conda install -c conda-forge jupyter_contrib_nbextensions
+RUN conda install jupyter_contrib_nbextensions
 RUN jupyter nbextension enable toc2/main
 RUN jupyter nbextension enable collapsible_headings/main
 RUN jupyter nbextension enable dragdrop/main
